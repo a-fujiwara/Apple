@@ -1,0 +1,318 @@
+.wrap{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/*header*/
+
+header{
+	width: 100%;
+	height: 50px;
+	background-color: black;
+	display: flex;
+}
+
+.nav{
+	display: table;
+	margin: 0 auto;
+}
+
+.nav li {
+	list-style: none;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 35px;
+}
+
+.nav li a{
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	font-family: 'HiraginoSans-W0';
+	font-size: 13px;
+	font-weight: 100;	
+}
+
+.nav_animation{
+	display: none;
+
+}
+
+img.logo {
+	width: 50px;
+	height: 50px;
+}
+
+
+.nav li a:hover{
+	opacity: 0.5;
+}
+
+.nav_responsible{
+	display: block;
+}
+
+.btnHamburger {
+  display: none;		
+  position: absolute;
+  top: 3px;
+  left: 40px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.btnHamburger .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: white;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.btnHamburger .line_01 { top: 10px; }
+.btnHamburger .line_02 { top: 22px; }
+.btnHamburger .line_03 { top: 34px; }
+
+.btnHamburger.is-active .line_01 {
+  top: 24px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.btnHamburger.is-active .line_02 {
+  opacity: 0;
+}
+
+.btnHamburger.is-active .line_03 {
+  top: 24px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+
+/*トップ画面*/
+#slide{
+	position: relative;
+	overflow: hidden;
+	height: 600px;
+}
+
+#slide img{
+	width: 100%;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	height: auto;
+	vertical-align: bottom;
+}
+
+#prev_button{
+	position: absolute;
+	top: 50%;
+	left: 0px;
+}
+
+#next_button{
+	position: absolute;
+	top: 50%;
+	right: 0px;
+}
+
+.common_button{
+	width: 60px;
+	height: 40px;
+	text-align: center;
+	font-size: 24px;
+	display: none;
+	color: #808080;
+	padding:8px 0 10px;
+	border-radius: 50%;
+	background-color: #F3F3F3;
+	opacity: 0.6;
+}
+
+
+.common_button p{
+	padding-top: 5px;
+}
+
+/*トップ画面 bottom*/
+.bottom{
+	display: flex;
+}
+
+.bottom img{
+	zoom:2;
+	box-sizing: border-box;
+	overflow: hidden;
+	width: 100%;
+	height: 92px;
+	vertical-align: bottom;
+}
+
+/*フッターtop*/
+footer{
+	background-color: #EEEEEE;
+	line-height: 20px;
+}
+
+footer a{
+	text-decoration: none;
+}
+
+
+footer a:hover{
+	border-bottom: 1px solid #333333;
+	color: #333333;
+}
+
+.footer_top h2{
+	font-weight: bold;
+	font-size: 10px;
+	color: 	#333333;
+}
+
+.footer_top a{
+	font-size: 9px;
+	color: gray;
+	width: 100%;
+}
+
+.footer_top{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 15px;
+}
+
+.f_box3_2,.f_box4_2{
+	padding-top: 15px;
+}
+
+.dropdown{
+	position: absolute;
+	right: 15px; 
+	margin-top: -25px;
+	display: none;
+}
+
+/*フッターmiddle*/
+.footer_middle p{
+	color: #BBBBBB;
+	font-size: 9px;
+	padding-top: 15px;
+}
+
+.footer_middle a{
+	text-decoration: none;
+	color: #6699CC;
+}
+
+
+/*フッターbottom*/
+.footer_bottom{
+	margin-top: 10px;
+	padding:10px  0 25px 0;
+	border-top: 1px solid #DDDDDD;
+	display: flex;
+}
+
+.footer_bottom p{
+	color: #BBBBBB;
+	font-size: 9px;
+	margin-right: 15px;
+}
+
+.footer_nav li{
+	display: inline;
+	padding: 0 10px;
+	font-size: 9px;
+}
+
+.footer_nav a{
+	color: #999999; 
+}
+
+.right{
+	border-right: 1px solid #DDDDDD;
+}
+
+.country{
+	margin-left: 216px;
+}
+
+.mark{
+	width: 15px;
+	height: 15px;
+}
+
+.country span{
+	font-size: 10px;
+	color:#999999; 
+}
+
+.active{
+	display:block!important;
+}
+
+.rotate{
+	transition: all 0.4s;
+	transform:rotate( 45deg);
+}
+
+/*レスポンシブ*/
+/*959px以下*/
+@media (max-width: 959px) {
+	#slide {height:300px;}
+	.nav a{display: none;}
+	header{
+		position:fixed;
+		z-index:100;
+	}
+	.btnHamburger{display: block;}
+	.nav li{
+		display: block;
+		padding:15px 0;
+	}
+	.nav li a{
+		font-size: 20px;
+		text-align: left;
+	}
+	.menu_wrap{display: none;}
+	.footer_top {flex-direction: column;}
+	.footer_top h2 {
+		font-size: 12px;
+		padding:5px 0 5px 10px ;
+		border-bottom: 1px solid gray; 
+	}
+	.dropdown{
+		display: block;
+		cursor: pointer;
+	}
+	.country{display: none;}
+	.footer_middle{word-break: keep-all;}
+	.wrapper{width: 100vw;}
+}
+
+/*768px以下*/
+@media (max-width:768px) {
+    .bottom {flex-direction: column;}
+	.bottom img{height: 150px;}
+    
+  }
+
